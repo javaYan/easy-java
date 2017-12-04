@@ -89,6 +89,11 @@ public class Example_01 {
                 .forEach( System.out::println );
     }
 
+    @Test
+    public void test_06() {
+
+    }
+
     @After
     public void after() {
 

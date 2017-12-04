@@ -11,7 +11,7 @@
 
     <modules>
         <module>easy-java8</module>
-        <module>easy-util</module>
+        <module>easy-pressuretest</module>
     </modules>
 
     <properties>
