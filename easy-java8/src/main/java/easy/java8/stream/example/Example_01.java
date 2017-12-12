@@ -89,9 +89,22 @@ public class Example_01 {
                 .forEach( System.out::println );
     }
 
+    /**
+     * 取出名字 组装成set  无序
+     */
     @Test
     public void test_06() {
+        Set<String> nameSet = studentList.stream().map(Student::getName).collect(Collectors.toSet());
+        System.out.println(nameSet);
+    }
 
+    /**
+     * 取出名字 组装成list  有序
+     */
+    @Test
+    public void test_07() {
+        List<String> nameList = studentList.stream().map(Student::getName).collect(Collectors.toList());
+        System.out.println(nameList);
     }
 
     @After
