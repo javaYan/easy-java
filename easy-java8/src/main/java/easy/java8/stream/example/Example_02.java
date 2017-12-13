@@ -57,7 +57,7 @@ public class Example_02 {
      */
     @Test
     public void test_reduce_max() {
-        System.out.println(Arrays.asList(1,2,2,3,1,6,4).stream().reduce(0,(a, b) -> Integer.max(a,b)));
+        System.out.println(Arrays.asList(1,2,2,3,1,6,4).stream().reduce(0,Integer::max));
     }
 
     /**
