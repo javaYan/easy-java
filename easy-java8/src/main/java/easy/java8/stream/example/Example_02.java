@@ -51,4 +51,48 @@ public class Example_02 {
         numbers.stream().skip(1).limit(4).forEach(System.out::println);
     }
 
+
+    /**
+     * reduce 求最大值
+     */
+    @Test
+    public void test_reduce_max() {
+        System.out.println(Arrays.asList(1,2,2,3,1,6,4).stream().reduce(0,(a, b) -> Integer.max(a,b)));
+    }
+
+    /**
+     * reduce 求和
+     */
+    @Test
+    public void test_reduce() {
+        System.out.println(Arrays.asList(1,2,2,3,1,6,4).stream().reduce(0,(a, b) -> Integer.sum(a,b)));
+    }
+
+    /**
+     * reduce 求和
+     */
+    @Test
+    public void test_sum() {
+        System.out.println(Arrays.asList(1,2,2,3,1,6,4).stream().mapToInt(a->a.intValue()).sum());
+    }
+
+    /**
+     * reduce 拼接字符串
+     */
+    @Test
+    public void test_reduce_string() {
+        List<String> strings = Arrays.asList("xiaowang", "zhanglaoshi", "liming", "wahaha");
+        String strAppend = strings.stream().sorted().reduce("", (str1, str2) -> str1 +" "+ str2);
+        System.out.println(strAppend);
+    }
+
+    /**
+     * joining 拼接字符串
+     */
+    @Test
+    public void test_joining() {
+        List<String> strings = Arrays.asList("xiaowang", "zhanglaoshi", "liming", "wahaha");
+        String strAppend = strings.stream().sorted().collect(Collectors.joining(" "));
+        System.out.println(strAppend);
+    }
 }
