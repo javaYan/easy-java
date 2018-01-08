@@ -6,6 +6,7 @@ import org.junit.*;
 
 import java.time.LocalDate;
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -106,6 +107,20 @@ public class Example_01 {
         List<String> nameList = studentList.stream().map(Student::getName).collect(Collectors.toList());
         System.out.println(nameList);
     }
+
+    /**
+     * (k,v) -> (name,Student) 组装成map  有序
+     */
+    @Test
+    public void test_08() {
+        Map<String, Student> studentMap = studentList.stream().collect(Collectors.toMap(Student::getName, Function.identity()));
+        System.out.println(studentMap);
+    }
+
+
+
+
+
 
     @After
     public void after() {
