@@ -12,6 +12,7 @@
     <modules>
         <module>easy-java8</module>
         <module>easy-pressuretest</module>
+        <module>easy-practice</module>
     </modules>
 
     <properties>
