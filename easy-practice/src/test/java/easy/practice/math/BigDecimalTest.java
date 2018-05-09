@@ -1,4 +1,4 @@
-package easy.practice;
+package easy.practice.math;
 
 import org.junit.Test;
 

@@ -1,5 +1,7 @@
-package easy.practice;
+package easy.practice.clazz;
 
+import easy.practice.clazz.StudentPrivateService;
+import easy.practice.clazz.StudentService;
 import org.junit.Test;
 
 import java.lang.reflect.Field;

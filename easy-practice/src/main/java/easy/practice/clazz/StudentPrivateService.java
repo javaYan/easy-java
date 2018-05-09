@@ -1,9 +1,13 @@
-package easy.practice;
+package easy.practice.clazz;
 
 /**
  * Created by Mr_yyy on 2018/1/21.
  */
-public class StudentService {
+public class StudentPrivateService {
+    /**
+     * 私有构造器
+     */
+    private StudentPrivateService() {}
     private String name;
 
     public void say() {
